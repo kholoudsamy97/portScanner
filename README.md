@@ -17,13 +17,16 @@ is generated.
 
 ***
 
-## Running test cases on Metasploitabl2 so this test case on one IP not range of IPs
+## Test Cases of TCP Scan on Metasploitable2
 
+Metasploitable2:
+![](images/Metasploit.png)
 TCP Scan:
 ![](images/TCPScan.png)
 Nmap:
 ![](images/Nmap.png)
 output file of nmap:
 ![](images/outputFileOfNmap.png)
+
 
 
