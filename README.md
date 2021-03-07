@@ -17,7 +17,7 @@ is generated.
 
 ***
 
-## Test Cases of TCP Scan on Metasploitable2
+## Test Case of TCP Scan on Metasploitable2
 
 Metasploitable2:
 ![](images/Metasploit.png)
@@ -27,6 +27,16 @@ Nmap:
 ![](images/Nmap.png)
 output file of nmap:
 ![](images/outputFileOfNmap.png)
+
+## Test Case of UDP Scan on open udp port on localhost
+![](images/udp.png)
+
+## Test Case of listening on top unknown ports
+![](images/listen.png)
+
+
+
+
 
 
 
