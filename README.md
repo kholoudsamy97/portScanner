@@ -9,10 +9,11 @@ the user.
 
 Running test cases on Metasploitabl2 so this test case on one IP not range of IPs
 
+TCP Scan:
 ![](images/TCPScan.png)
-
+Nmap:
 ![](images/Nmap.png)
-
+output file of nmap:
 ![](images/outputFileOfNmap.png)
 
 ***
