@@ -10,8 +10,12 @@ from scapy.all import *
 import smtplib
 
 def tcpScan():
-    # get user input for range in form xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx and xx-xx
-    ipStart, ipEnd = input("Enter IP-IP: ").split("-")
+    op = input("[1] Range of IPS\n[2] Only one IP\nEnter your option: ")
+    if op == '2':
+        ipStart = ipEnd = input("Enter IP: ")
+    else:
+        # get user input for range in form xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx and xx-xx
+        ipStart, ipEnd = input("Enter IP-IP: ").split("-")
     # define IP range
     iprange = netaddr.IPRange(ipStart, ipEnd)
     # get user input for port range in form xxx-xxx
@@ -31,14 +35,14 @@ def tcpScan():
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 socket.setdefaulttimeout(1)
                 result = s.connect_ex((str(ip), port))  # returns an error indicator
-                print("checking port {}".format(port))
+                #print("checking port {}".format(port))
                 if result == 0:
                     print("port {} is open".format(port))
                     ports.append(str(port))
                 s.close()
-            print(ports)
+            #print(ports)
             portsStr = ','.join(ports)
-            print(portsStr)
+            #print(portsStr)
             os.system("nmap -T4 -v -sC -sV -oN output.txt -p{} --append-output ".format(portsStr) + str(ip))
         except keyboardInterrupt:
             print("\nExiting program.")
@@ -54,8 +58,12 @@ def tcpScan():
 
 
 def udpScan():
-    # get user input for range in form xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx and xx-xx
-    ipStart, ipEnd = input("Enter IP-IP: ").split("-")
+    op = input("[1] Range of IPS\n[2] Only one IP\nEnter your option: ")
+    if op == '2':
+        ipStart = ipEnd = input("Enter IP: ")
+    else:
+        # get user input for range in form xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx and xx-xx
+        ipStart, ipEnd = input("Enter IP-IP: ").split("-")
     # define IP range
     iprange = netaddr.IPRange(ipStart, ipEnd)
     # get user input for port range in form xxx-xxx
