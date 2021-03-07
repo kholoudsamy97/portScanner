@@ -1,0 +1,10 @@
+os		#installed by default
+sys		#installed by default
+socket		#installed by default
+datetime 	#installed by default
+
+netaddr  	# pip install it on kali
+iptc            # pip install it on kali
+scapy.all 	# pip install it on kali
+yagmail		# pip install it on kali
+import smtplib	# pip install it on kali
